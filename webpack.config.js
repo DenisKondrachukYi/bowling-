@@ -10,7 +10,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     devtool:'inline-source-map',
     entry: {
-            'application': './src/index.js',
+            'application': './src/js/index.js',
             'vendors': [
                 'jquery'
             ]
@@ -78,7 +78,7 @@ module.exports = {
             }),
         new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.bundle.js'),
         new HtmlWebpackPlugin({
-          template: './src/index.jade'
+          template: './src/index.pug'
         })
         // ,
         // new webpack.optimize.UglifyJsPlugin({
