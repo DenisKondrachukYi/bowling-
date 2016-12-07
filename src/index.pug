@@ -29,11 +29,46 @@ html
                      |плюс финальная часть
             .file_pdf
                 img.pdf_img(src='img/logo_pdf.svg')
-                a.none_decor(href='#')
-                    p.text_color Полный регламент.pdf, 27 mb
+                a.none_decor(href='bowling.docx')
+                    p.text_color Полный регламент.docx, 482 KB
             img.win_m(src='img/winner.svg')
             p Победители получают призы и медали
             p + уважение и почет, конечно же
         section_3
-            h1 Место проведения
-            img.map_img(src='img/map.png')
+            h1.text_color Место проведения
+            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1268.8895787251452!2d30.496499730656055!3d50.50106785671679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d208d27b5dc5%3A0xd8edf49d72a07da3!2z0JHQvtGD0LvQuNC90LMt0LrQu9GD0LEgIkJyb29rbHluIg!5e0!3m2!1sru!2sua!4v1481022206043', width='100%', height='400px', frameborder='0', style='border:0', allowfullscreen='')
+            h1.text_color Список участников
+            .first_line
+                span.bord
+                span.bord
+                span.bord
+                span.bord
+                span.bord
+                span.bord
+            .second_line
+                span.bord
+                span.bord
+                span.bord
+                span.bord
+                span.bord
+                span.bord
+        section_4
+            h1.text_color Поле боя
+            .block_img
+                img(src="img/girl.jpg")
+                img(src="img/girl_b.jpg")
+                img(src="img/man.jpg")
+                img(src="img/men_gl.jpg")
+        section_5
+            h1.text_color Регистрируйте команды!
+            p.tx_5 Есть ограничение:
+                br
+                | в турнире сможет принять участие максимум 20 команд!
+            a(href="https://goo.gl/forms/KS6iR5fbo0hXZlzn2")
+                button.btn_form Принять участие
+        footer
+            p.footer_text Copyright © 2016. БОУЛИНГ КЛУБ “BROOKLYN”
+            img_soc
+                img.margin_10(src="img/facebook.svg" width="30px")
+                img.margin_10(src="img/twitter.svg" width="30px")
+                img.margin_10(src="img/google.svg" width="30px")
