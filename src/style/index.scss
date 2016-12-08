@@ -9,6 +9,9 @@ $bg-color: #fff;
 .margin{
 	margin: 0;
 }
+.brooklyn-logotype{
+	margin-left: 100px;
+}
 .margin_10{
 	margin-right: 10px;
 }
@@ -21,6 +24,37 @@ $bg-color: #fff;
 .text_color{
 	color: #0881ca;
 }
+.winner_text{
+	font-size: 25px;
+	font-weight: bold;
+	@extend .text_color;
+	padding: 0;
+	margin: 0;
+}
+.position_text_place{
+	margin: 40px 0px 40px 0px;
+	font-size: 40px;
+	font-weight: 100;
+	letter-spacing: 1.2px;
+}
+.overlay{
+	background-color: rgba(0,0,0,0.1);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.z-in{
+	width: 320px;
+	padding: 20px 40px 40px 570px;
+	z-index: 999999;
+}
+p.winner_text_0{
+	font-size: 20px;
+	@extend .text_color;
+	padding: 0;
+	margin: 0;
+}
 .none_decor{
 	text-decoration: none;
 }
@@ -32,12 +66,14 @@ html{
 body{
 	width: 100%;
 	height: 100%;
+	font-family: 'Rubik', sans-serif;
 	margin: 0px;
 }
 section_1{
 	width: 100%;
 	height: 100%;
 	display: flex;
+	margin: 20px 0px 20px 0px;
 	justify-content: space-around;
 }
 middle_section{
@@ -112,16 +148,12 @@ span.bord{
 	background-color: #f4f4f4;
 }
 .block_img{
-	display: flex;
 	width: 100%;
-	justify-content: center;
+	height: 100%;
 }
 section_4{
-	display: flex;
-	justify-content: center;
 	width: 100%;
-	flex-direction: column;
-	flex-wrap: wrap;
+	height: 100%;
 	text-align: center;
 }
 section_5{
@@ -129,6 +161,9 @@ section_5{
 	text-align: center;
 	justify-content: center;
 	flex-flow: wrap column;
+}
+.frame{
+	position: relative;
 }
 .tx_5{
 	@extend .text_color;
@@ -144,6 +179,14 @@ button.btn_form{
 	color: $bg-color;
 	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 	margin: 10px 0px 40px 0px;
+	transition: all 0.2s linear 0.2s ;
+}
+button.btn_form:hover{
+	background-color: #fff;
+	color: #1eabf4;
+}
+button.btn_form:active{
+	box-shadow: none;
 }
 footer{
 	width: 100%;
@@ -157,6 +200,236 @@ footer{
 	color: #a2adbd;
 	font-size: 10px;
 }
+.right_left{
+	width: 22%;
+	height: 100%;
+}
+.mide{
+	width: 27.5%;
+	height: 100%;
+}
 .img_soc{
 	display: flex;
+}
+.anim_soc{
+	transition: all 0.3s linear 0.1s;
+}
+.anim_soc:hover{
+	transform: rotate(360deg);
+
+}
+body .btn-bg {
+	width: 100%;
+	height: 0vh;
+	min-height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+body .btn-bg.Ocean {
+	background: #fff;
+}
+body .btn-bg.Ocean .btn-group .Coral button {
+	color: #fff;
+	overflow: hidden;
+	position: relative;
+	border: 0;
+	background: #1eabf4;
+	transition: all 1s ease;
+}
+body .btn-bg.Ocean .btn-group .Coral button:hover {
+	color: #1eabf4;
+	overflow: hidden;
+	position: relative;
+	border: 0;
+	background: #fff;
+	transition: all 1s ease;
+}
+body .btn-bg.Ocean .btn-group .Coral button span {
+	position: absolute;
+	content: '';
+	top: 1.75em;
+	left: 30%;
+	width: 25em;
+	height: 20em;
+	margin-left: -10em;
+	border-radius: 42.5%;
+	transform-origin: 50% 50%;
+	transition: all 1s ease, top 1.5s ease;
+}
+body .btn-bg.Ocean .btn-group .Coral button .Coralwave1 {
+	background: #ffb733;
+	animation: smallwave 3s infinite linear;
+}
+body .btn-bg.Ocean .btn-group .Coral button .Coralwave2 {
+	background: #f97890;
+	animation: smallwave 4s infinite linear;
+}
+body .btn-bg.Ocean .btn-group .Coral button .Coralwave3 {
+	background: #4ab3e1;
+	animation: smallwave 5s infinite linear;
+}
+body .btn-bg.Ocean .btn-group .Coral button:hover {
+	transition: all 1s ease;
+}
+body .btn-bg.Ocean .btn-group .Coral button:hover span {
+	top: 0.5em;
+	transition: all 1s ease, top 1.5s ease;
+}
+.btn-group {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+}
+@media screen and (max-width: 480px) {
+	.btn-group {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+.btn {
+	display: block;
+}
+.btn-info {
+	margin-bottom: 10px;
+	text-align: center;
+	font-family: 'Lato';
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: 600;
+	font-size: 3.5em;
+	color: #fff;
+}
+.btn-mention {
+	margin-bottom: 70px;
+	text-align: center;
+	font-family: 'Lato';
+	letter-spacing: 0.1em;
+	font-size: 1.1em;
+	color: #fff;
+}
+.btn-mention span {
+	font-size: 1.2em;
+	font-weight: 600;
+}
+button {
+	cursor: pointer;
+	overflow: visible;
+	outline: none;
+	color: #fff;
+	position: relative;
+	letter-spacing: 0.1em;
+	font-weight: 400;
+	padding: 0.7rem 3rem 0.7rem 3rem;
+	text-transform: uppercase;
+	font-family: "Lato";
+	font-size: 1em;
+}
+button a {
+	text-decoration: none;
+}
+@-moz-keyframes wave {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+	50% {
+		transform: rotate(180deg) scale(0.975);
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+	}
+}
+@-webkit-keyframes wave {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+	50% {
+		transform: rotate(180deg) scale(0.975);
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+	}
+}
+@-o-keyframes wave {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+	50% {
+		transform: rotate(180deg) scale(0.975);
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+	}
+}
+@keyframes wave {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+	50% {
+		transform: rotate(180deg) scale(0.975);
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+	}
+}
+@-moz-keyframes smallwave {
+	0% {
+		transform: rotate(0deg) scale(1);
+		opacity: 0.8;
+	}
+	50% {
+		transform: rotate(180deg) scale(0.95);
+		opacity: 0.25;
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+		opacity: 0.8;
+	}
+}
+@-webkit-keyframes smallwave {
+	0% {
+		transform: rotate(0deg) scale(1);
+		opacity: 0.8;
+	}
+	50% {
+		transform: rotate(180deg) scale(0.95);
+		opacity: 0.25;
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+		opacity: 0.8;
+	}
+}
+@-o-keyframes smallwave {
+	0% {
+		transform: rotate(0deg) scale(1);
+		opacity: 0.8;
+	}
+	50% {
+		transform: rotate(180deg) scale(0.95);
+		opacity: 0.25;
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+		opacity: 0.8;
+	}
+}
+@keyframes smallwave {
+	0% {
+		transform: rotate(0deg) scale(1);
+		opacity: 0.8;
+	}
+	50% {
+		transform: rotate(180deg) scale(0.95);
+		opacity: 0.25;
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+		opacity: 0.8;
+	}
 }

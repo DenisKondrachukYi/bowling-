@@ -2,15 +2,17 @@ doctype html
 html
     head
         title Bowling Battle
+        link(href='https://fonts.googleapis.com/css?family=Rubik:300,400', rel='stylesheet')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
     body
         section_1
-            img.group(src="img/group.svg" width='8%')
-            img.brooklyn-logotype(src="img/Brooklyn.svg" width='8%')
-            img.page-1(src="img/page-1.svg" width='17%')
+            img.group(src="img/group.svg" width='6%')
+            img.brooklyn-logotype(src="img/Brooklyn_logotype.png")
+            img.page-1(src="img/page-1.svg" width='13%')
         middle_section
             img.middle_img(src="img/middle.svg" width='100%')
         section_2
-            h1 Регламент
+            h1.text_color.position_text_place Регламент
             .description
                 .left
                     img(src="img/home.svg")
@@ -19,7 +21,7 @@ html
                      | от каждой компании
                 .mid
                     img(src="img/face.svg")
-                    p.text_color В каждой
+                    p.text_color(style="margin:27px 10px 10px 10px") В каждой
                      br
                      | команде по 3 человека
                 .right
@@ -32,12 +34,15 @@ html
                 a.none_decor(href='bowling.docx')
                     p.text_color Полный регламент.docx, 482 KB
             img.win_m(src='img/winner.svg')
-            p Победители получают призы и медали
-            p + уважение и почет, конечно же
+            p.winner_text Победители получают призы и медали
+            p.winner_text_0 + уважение и почет, конечно же
         section_3
-            h1.text_color Место проведения
-            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1268.8895787251452!2d30.496499730656055!3d50.50106785671679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d208d27b5dc5%3A0xd8edf49d72a07da3!2z0JHQvtGD0LvQuNC90LMt0LrQu9GD0LEgIkJyb29rbHluIg!5e0!3m2!1sru!2sua!4v1481022206043', width='100%', height='400px', frameborder='0', style='border:0', allowfullscreen='')
-            h1.text_color Список участников
+            h1.text_color.position_text_place Место проведения
+            .frame
+                .overlay
+                    img.z-in(src="img/z-in.png")
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1268.8895787251452!2d30.496499730656055!3d50.50106785671679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d208d27b5dc5%3A0xd8edf49d72a07da3!2z0JHQvtGD0LvQuNC90LMt0LrQu9GD0LEgIkJyb29rbHluIg!5e0!3m2!1sru!2sua!4v1481022206043', width='100%', height='400px', frameborder='0', style='border:0', allowfullscreen='')
+            h1.text_color.position_text_place Список участников
             .first_line
                 span.bord
                 span.bord
@@ -53,22 +58,35 @@ html
                 span.bord
                 span.bord
         section_4
-            h1.text_color Поле боя
+            h1.text_color.position_text_place Поле боя
             .block_img
-                img(src="img/girl.jpg")
-                img(src="img/girl_b.jpg")
-                img(src="img/man.jpg")
-                img(src="img/men_gl.jpg")
+                img.animated.pulse.right_left(src="img/girl.jpg")
+                img.animated.pulse.mide(src="img/girl_b.jpg")
+                img.animated.pulse.mide(src="img/man.jpg")
+                img.animated.pulse.right_left(src="img/men_gl.jpg")
         section_5
-            h1.text_color Регистрируйте команды!
+            h1.text_color.position_text_place Регистрируйте команды!
             p.tx_5 Есть ограничение:
                 br
                 | в турнире сможет принять участие максимум 20 команд!
-            a(href="https://goo.gl/forms/KS6iR5fbo0hXZlzn2")
-                button.btn_form Принять участие
+                .btn-bg.Ocean
+                    .btn-group
+                        .btn.Coral
+                            a(href="https://goo.gl/forms/KS6iR5fbo0hXZlzn2" target="_blank")
+                                button
+                                    | Принять участие
+                                    span.Coralwave1
+                                    span.Coralwave2
+                                    span.Coralwave3
+
+
+
         footer
             p.footer_text Copyright © 2016. БОУЛИНГ КЛУБ “BROOKLYN”
             img_soc
-                img.margin_10(src="img/facebook.svg" width="30px")
-                img.margin_10(src="img/twitter.svg" width="30px")
-                img.margin_10(src="img/google.svg" width="30px")
+                a(href="#" target="_blank")
+                    img.margin_10.anim_soc(src="img/facebook.svg" width="30px")
+                a(href="#" target="_blank")
+                    img.margin_10.anim_soc(src="img/twitter.svg" width="30px")
+                a(href="#" target="_blank")
+                    img.margin_10.anim_soc(src="img/google.svg" width="30px")
